@@ -23,9 +23,13 @@ export default {
     // for display in the table:
     getFormattedTransactions() {
       const getDisplayAmount = (type, amount) => {
+        if (amount === undefined) return '';
         if (amount === 0) return accounting.formatMoney(amount);
         return accounting.formatMoney(amount, {
-          format: { pos: '%s %v', neg: '%s (%v)' }
+          format: {
+            pos: '%s %v',
+            neg: '%s (%v)'
+          }
         });
       };
 
@@ -60,7 +64,8 @@ export default {
     // user must confirm the action through the Confirmation Modal
     // component:
     onRemoveClick(transaction) {
-      this.pendingTransaction = { ...transaction };
+      this.pendingTransaction = { ...transaction
+      };
       this.confirmationModalShown = true;
     },
 

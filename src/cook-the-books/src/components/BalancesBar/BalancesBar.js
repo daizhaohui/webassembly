@@ -32,7 +32,7 @@ export default {
         </balance-card>
         <balance-card
           title="Current Raw Balance"
-          :value="balances.currentRaw">
+          :value="balances.currentRaw||''">
         </balance-card>
         <balance-card
           title="Initial Cooked Balance"
@@ -41,7 +41,7 @@ export default {
         </balance-card>
         <balance-card
           title="Current Cooked Balance"
-          :value="balances.currentCooked">
+          :value="balances.currentCooked||''">
         </balance-card>
       </div>
     </div>
