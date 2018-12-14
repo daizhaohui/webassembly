@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "browser-snyc start --server \"src\" --files \" src/**\" --single --no-open --port 4000"
+    "start": "browser-sync start --server \"src\" --files \"src/**\" --single --no-open --port 4000"
   },
   "keywords": [],
   "author": "",
